@@ -14,6 +14,12 @@
 
 
     <!-- =========================================
+         PRECARGA DE IMAGEN CRÍTICA (LOGO)
+    ========================================== -->
+    <link rel="preload" as="image" href="6.png" fetchpriority="high">
+
+
+    <!-- =========================================
          FUENTES
     ========================================== -->
 
@@ -729,7 +735,7 @@
 
 
         /* =========================================
-           GALERÍAS
+           GALERÍAS Y BOTÓN MENCIONES
         ========================================== */
 
         .gallery-grid {
@@ -800,6 +806,35 @@
 
             filter:
                 grayscale(0%);
+        }
+
+        .menciones-btn-container {
+            margin-top: 1.2rem;
+            text-align: center;
+        }
+
+        .menciones-btn {
+            display: inline-block;
+            background-color: transparent;
+            color: var(--pure-white);
+            font-family: 'Cinzel', serif;
+            font-weight: bold;
+            font-size: 0.85rem;
+            letter-spacing: 2px;
+            border: 1px solid var(--pure-white);
+            padding: 0.6rem 1.4rem;
+            border-radius: 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+        }
+
+        .menciones-btn:hover {
+            background-color: var(--pure-white);
+            color: #000;
+            box-shadow: 0 0 15px var(--pure-white);
+            transform: translateY(-2px);
         }
 
 
@@ -1350,6 +1385,9 @@
             <img
                 src="6.png"
                 alt="El Conjuro de las Ranas"
+                loading="eager"
+                fetchpriority="high"
+                decoding="async"
             >
 
         </div>
@@ -1448,6 +1486,8 @@
                             <img
                                 src="7.jpg"
                                 alt="Gerardo Szae"
+                                loading="lazy"
+                                decoding="async"
                             >
 
                         </div>
@@ -1470,6 +1510,8 @@
                         <img
                             src="4.jpg"
                             alt="Gustavo Narváez"
+                            loading="lazy"
+                            decoding="async"
                         >
 
                     </div>
@@ -1639,6 +1681,8 @@
                     <img
                         src=""
                         alt=""
+                        loading="lazy"
+                        decoding="async"
                     >
 
                 </div>
@@ -1649,6 +1693,8 @@
                     <img
                         src=""
                         alt=""
+                        loading="lazy"
+                        decoding="async"
                     >
 
                 </div>
@@ -1659,6 +1705,8 @@
                     <img
                         src=""
                         alt=""
+                        loading="lazy"
+                        decoding="async"
                     >
 
                 </div>
@@ -1669,6 +1717,8 @@
                     <img
                         src=""
                         alt=""
+                        loading="lazy"
+                        decoding="async"
                     >
 
                 </div>
@@ -1679,6 +1729,8 @@
                     <img
                         src=""
                         alt=""
+                        loading="lazy"
+                        decoding="async"
                     >
 
                 </div>
@@ -1689,11 +1741,20 @@
                     <img
                         src=""
                         alt=""
+                        loading="lazy"
+                        decoding="async"
                     >
 
                 </div>
 
 
+            </div>
+
+            <!-- BOTÓN A MENCIONES HONORÍFICAS -->
+            <div class="menciones-btn-container">
+                <a href="menciones.html" target="_blank" class="menciones-btn">
+                    Menciones Honoríficas
+                </a>
             </div>
 
         </section>
@@ -1720,6 +1781,8 @@
                     <img
                         src=""
                         alt=""
+                        loading="lazy"
+                        decoding="async"
                     >
 
                 </div>
@@ -1730,6 +1793,8 @@
                     <img
                         src=""
                         alt=""
+                        loading="lazy"
+                        decoding="async"
                     >
 
                 </div>
@@ -1740,6 +1805,8 @@
                     <img
                         src=""
                         alt=""
+                        loading="lazy"
+                        decoding="async"
                     >
 
                 </div>
@@ -1750,6 +1817,8 @@
                     <img
                         src=""
                         alt=""
+                        loading="lazy"
+                        decoding="async"
                     >
 
                 </div>
