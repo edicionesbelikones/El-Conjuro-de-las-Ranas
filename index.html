@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Conjuro de las Ranas</title>
+    <style>
+        /* Reset y Variables de Estilo */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-color: #0b0f0d;
+            --card-bg: #131a16;
+            --accent-green: #2d6a4f;
+            --glow-green: #52b788;
+            --text-color: #d8f3dc;
+            --border-color: #1b4332;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* Encabezado */
+        header {
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+            background: linear-gradient(180deg, rgba(45, 106, 79, 0.1) 0%, rgba(11, 15, 13, 1) 100%);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--glow-green);
+            text-shadow: 0 0 10px rgba(82, 183, 136, 0.3);
+        }
+
+        /* Navegación Vacía */
+        nav {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        /* Contenido Principal Vacío */
+        main {
+            flex: 1;
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        /* Estructura de Tarjeta Vacía */
+        .empty-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 2rem;
+            min-height: 200px;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .empty-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--glow-green);
+            box-shadow: 0 4px 20px rgba(82, 183, 136, 0.15);
+        }
+
+        /* Pie de Página Vacío */
+        footer {
+            padding: 1.5rem;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado de la página -->
+    <header>
+        <h1>El Conjuro de las Ranas</h1>
+        <nav>
+            <!-- Enlaces de navegación irán aquí -->
+        </nav>
+    </header>
+
+    <!-- Área principal vacía -->
+    <main>
+        <div class="empty-card"></div>
+        <div class="empty-card"></div>
+        <div class="empty-card"></div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <!-- Información de copyright o pie de página aquí -->
+    </footer>
+
+</body>
+</html>
