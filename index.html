@@ -141,6 +141,70 @@
 
 
         /* =========================================
+           BOTONES LATERALES MORADOS (EFECTO SALCHICHA)
+        ========================================== */
+
+        .side-links-container {
+            position: fixed;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 9999;
+        }
+
+        .sausage-link {
+            display: flex;
+            align-items: center;
+            width: 48px;
+            height: 48px;
+            background-color: #8a2be2;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 24px;
+            border: 2px solid #ffffff;
+            box-shadow: 0 0 12px rgba(138, 43, 226, 0.8);
+            overflow: hidden;
+            transition: width 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.27), background-color 0.3s ease;
+            white-space: nowrap;
+            cursor: pointer;
+        }
+
+        .sausage-link:hover {
+            width: 170px;
+            background-color: #a020f0;
+            box-shadow: 0 0 20px rgba(160, 32, 240, 1), 0 0 10px #ffffff;
+        }
+
+        .sausage-icon {
+            min-width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Cinzel', serif;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .sausage-text {
+            font-family: 'Cinzel', serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            padding-right: 15px;
+            opacity: 0;
+            transition: opacity 0.3s ease 0.1s;
+        }
+
+        .sausage-link:hover .sausage-text {
+            opacity: 1;
+        }
+
+
+        /* =========================================
            ENCABEZADO
         ========================================== */
 
@@ -1284,6 +1348,10 @@
 
         @media (max-width: 768px) {
 
+            .side-links-container {
+                left: 10px;
+            }
+
             .poets-grid {
 
                 grid-template-columns:
@@ -1409,6 +1477,23 @@
 
 
 <body>
+
+    <!-- =========================================
+         BOTONES LATERALES FLOTANTES (GERARDO Y GUSTAVO)
+    ========================================== -->
+    <div class="side-links-container">
+        <!-- Gerardo -->
+        <a href="https://www.instagram.com/szaeta/" target="_blank" rel="noopener noreferrer" class="sausage-link" title="Gerardo Szae">
+            <span class="sausage-icon">G</span>
+            <span class="sausage-text">Gerardo Szae</span>
+        </a>
+
+        <!-- Gustavo -->
+        <a href="https://www.instagram.com/felipeplein2026/" target="_blank" rel="noopener noreferrer" class="sausage-link" title="Gustavo Narváez">
+            <span class="sausage-icon">G</span>
+            <span class="sausage-text">Gustavo Narváez</span>
+        </a>
+    </div>
 
 
     <!-- =========================================
