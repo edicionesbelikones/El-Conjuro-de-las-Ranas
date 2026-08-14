@@ -4,12 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Conjuro de las Ranas</title>
-    <!-- Fuentes elegantes de inspiración psicodélica y vintage -->
+    <!-- Fuentes elegantes y psicodélicas de respaldo -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Metamorphous&family=Space+Grotesk:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Creepster&family=Metamorphous&family=Space+Grotesk:wght@300;400;600&display=swap" rel="stylesheet">
     
     <style>
+        /* DEFINICIÓN DE TU FUENTE PERSONALIZADA */
+        @font-face {
+            font-family: 'FuentePsicodelica';
+            src: url('5.jpg'); /* Actualiza la extensión aquí si tu fuente es .ttf o .woff2 */
+        }
+
         /* RESET & VARIABLES EN BLANCO Y NEGRO */
         * {
             margin: 0;
@@ -19,12 +25,14 @@
 
         :root {
             --bg-black: #000000;
-            --bg-dark-alpha: rgba(10, 10, 10, 0.85); /* Fondo semitransparente */
+            --bg-dark-alpha: rgba(10, 10, 10, 0.85);
             --bg-card-alpha: rgba(18, 18, 18, 0.9);
             --pure-white: #ffffff;
             --off-white: #e0e0e0;
             --gray-border: #555555;
             --gray-light: #aaaaaa;
+            /* Aplicación de la fuente con respaldos psicodélicos */
+            --psycho-font: 'FuentePsicodelica', 'Metamorphous', 'Creepster', cursive;
         }
 
         body {
@@ -55,9 +63,9 @@
         }
 
         header h1 {
-            font-family: 'Metamorphous', cursive;
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            letter-spacing: 3px;
+            font-family: var(--psycho-font);
+            font-size: clamp(2rem, 5vw, 3.8rem);
+            letter-spacing: 4px;
             text-transform: uppercase;
             color: var(--pure-white);
             text-shadow: 
@@ -123,8 +131,8 @@
         }
 
         .psycho-section h2 {
-            font-family: 'Cinzel', serif;
-            font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+            font-family: var(--psycho-font);
+            font-size: clamp(1.2rem, 2.5vw, 1.8rem);
             color: var(--pure-white);
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -204,7 +212,7 @@
         }
 
         .author-card h3 {
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             font-family: 'Cinzel', serif;
             letter-spacing: 1px;
             border: 1px solid var(--gray-border);
@@ -427,7 +435,7 @@
             </div>
         </section>
 
-        <!-- 2. AUTORES (3 INTEGRANTES) -->
+        <!-- 2. AUTORES -->
         <section id="autores" class="psycho-section">
             <h2>Autores</h2>
             <div class="authors-grid">
@@ -443,7 +451,7 @@
                     <div class="author-photo-frame">
                         <img src="2.jpg" alt="Gerardo Szae">
                     </div>
-                    <h3>Gerardp Szae</h3>
+                    <h3>Gerardo Szae</h3>
                 </div>
                 <!-- Gustavo Narváez (Foto 4.jpg) -->
                 <div class="author-card">
@@ -499,7 +507,8 @@
         <!-- 6. ADJUNTAR ARCHIVOS Y COMENTARIOS (FORMSUBMIT) -->
         <section id="contacto" class="psycho-section">
             <h2>Adjuntar Archivos y Comentarios</h2>
-            <form class="formsubmit-container" action="https://formsubmit.co/tu-email@dominio.com" method="POST" enctype="multipart/form-data">
+            <!-- Destino de FormSubmit a edicionesbelikones@gmail.com -->
+            <form class="formsubmit-container" action="https://formsubmit.co/edicionesbelikones@gmail.com" method="POST" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="name">Nombre / Seudónimo</label>
                     <input type="text" id="name" name="name" required>
