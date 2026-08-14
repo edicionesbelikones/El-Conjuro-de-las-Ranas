@@ -735,7 +735,7 @@
 
 
         /* =========================================
-           GALERÍAS Y BOTÓN MENCIONES
+           GALERÍAS Y DESPLEGABLE MENCIONES
         ========================================== */
 
         .gallery-grid {
@@ -808,13 +808,14 @@
                 grayscale(0%);
         }
 
+        /* BOTÓN Y CONTENEDOR MENCIONES */
+
         .menciones-btn-container {
             margin-top: 1.2rem;
             text-align: center;
         }
 
         .menciones-btn {
-            display: inline-block;
             background-color: transparent;
             color: var(--pure-white);
             font-family: 'Cinzel', serif;
@@ -824,10 +825,11 @@
             border: 1px solid var(--pure-white);
             padding: 0.6rem 1.4rem;
             border-radius: 20px;
-            text-decoration: none;
+            cursor: pointer;
             text-transform: uppercase;
             transition: all 0.3s ease;
             box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+            outline: none;
         }
 
         .menciones-btn:hover {
@@ -835,6 +837,40 @@
             color: #000;
             box-shadow: 0 0 15px var(--pure-white);
             transform: translateY(-2px);
+        }
+
+        /* CONTENEDOR OCULTO DESPLEGABLE */
+        .menciones-desplegable {
+            display: none;
+            margin-top: 1.5rem;
+            border-top: 1px dashed var(--pure-white);
+            padding-top: 1.5rem;
+            animation: fadeIn 0.4s ease-in-out forwards;
+        }
+
+        .menciones-desplegable.active {
+            display: block;
+        }
+
+        .menciones-desplegable h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 0.95rem;
+            letter-spacing: 1.5px;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: var(--off-white);
+            text-transform: uppercase;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
 
@@ -1673,6 +1709,7 @@
                 Obras
             </h2>
 
+            <!-- GALERÍA PRINCIPAL DE OBRAS -->
             <div class="gallery-grid">
 
 
@@ -1750,11 +1787,46 @@
 
             </div>
 
-            <!-- BOTÓN A MENCIONES HONORÍFICAS -->
+            <!-- BOTÓN MENCIONES HONORÍFICAS -->
             <div class="menciones-btn-container">
-                <a href="menciones.html" target="_blank" class="menciones-btn">
+                <button type="button" class="menciones-btn" id="btnMenciones">
                     Menciones Honoríficas
-                </a>
+                </button>
+            </div>
+
+            <!-- SECCIÓN DESPLEGABLE CON 3 OBRAS HONORÍFICAS -->
+            <div class="menciones-desplegable" id="panelMenciones">
+                <h3>Obras Con Mención Honorífica</h3>
+                <div class="gallery-grid">
+
+                    <div class="gallery-item">
+                        <img
+                            src="mencion1.jpg"
+                            alt="Mención Honorífica 1"
+                            loading="lazy"
+                            decoding="async"
+                        >
+                    </div>
+
+                    <div class="gallery-item">
+                        <img
+                            src="mencion2.jpg"
+                            alt="Mención Honorífica 2"
+                            loading="lazy"
+                            decoding="async"
+                        >
+                    </div>
+
+                    <div class="gallery-item">
+                        <img
+                            src="mencion3.jpg"
+                            alt="Mención Honorífica 3"
+                            loading="lazy"
+                            decoding="async"
+                        >
+                    </div>
+
+                </div>
             </div>
 
         </section>
@@ -2017,20 +2089,32 @@
 
 
     <!-- =========================================
-         SCRIPT INTERACTIVO
+         SCRIPTS INTERACTIVOS
     ========================================== -->
 
     <script>
+        // --- 1. Control del botón desplegable de Menciones Honoríficas ---
+        const btnMenciones = document.getElementById('btnMenciones');
+        const panelMenciones = document.getElementById('panelMenciones');
+
+        btnMenciones.addEventListener('click', () => {
+            panelMenciones.classList.toggle('active');
+            if (panelMenciones.classList.contains('active')) {
+                btnMenciones.textContent = 'Ocultar Menciones';
+            } else {
+                btnMenciones.textContent = 'Menciones Honoríficas';
+            }
+        });
+
+        // --- 2. Control del Overlay / Efecto Secreto ---
         const secretBtn = document.getElementById('secretBtn');
         const vhsOverlay = document.getElementById('vhsOverlay');
 
-        // Activa el efecto al presionar el botón secreto
         secretBtn.addEventListener('click', (e) => {
             e.stopPropagation();
             vhsOverlay.classList.add('active');
         });
 
-        // Desactiva el efecto al hacer clic en cualquier parte de la pantalla
         vhsOverlay.addEventListener('click', () => {
             vhsOverlay.classList.remove('active');
         });
