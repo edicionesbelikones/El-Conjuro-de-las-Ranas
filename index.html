@@ -1,20 +1,44 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
     <title>El Conjuro de las Ranas</title>
 
-    <!-- FUENTES GOOGLE -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Rubik+Moonrocks&family=Shrikhand&family=Space+Grotesk:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- =========================================
+         FUENTES
+    ========================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Rubik+Moonrocks&family=Shrikhand&family=Space+Grotesk:wght@300;400;600&display=swap"
+        rel="stylesheet"
+    >
+
 
     <style>
 
         /* =========================================
-           RESET & VARIABLES
-        ========================================= */
+           RESET
+        ========================================== */
 
         * {
             margin: 0;
@@ -22,14 +46,32 @@
             box-sizing: border-box;
         }
 
+
+        /* =========================================
+           VARIABLES
+        ========================================== */
+
         :root {
+
             --bg-black: #000000;
-            --bg-dark-alpha: rgba(10, 10, 10, 0.85);
-            --bg-card-alpha: rgba(18, 18, 18, 0.9);
-            --pure-white: #ffffff;
-            --off-white: #e0e0e0;
-            --gray-border: #555555;
-            --gray-light: #aaaaaa;
+
+            --bg-dark-alpha:
+                rgba(10, 10, 10, 0.85);
+
+            --bg-card-alpha:
+                rgba(18, 18, 18, 0.9);
+
+            --pure-white:
+                #ffffff;
+
+            --off-white:
+                #e0e0e0;
+
+            --gray-border:
+                #555555;
+
+            --gray-light:
+                #aaaaaa;
 
             --psycho-font:
                 'Rubik Moonrocks',
@@ -38,39 +80,67 @@
                 sans-serif;
         }
 
+
         /* =========================================
-           CUERPO DE LA PÁGINA
-        ========================================= */
+           CUERPO
+        ========================================== */
 
         body {
-            background-color: var(--bg-black);
-            color: var(--pure-white);
-            font-family: 'Space Grotesk', sans-serif;
-            min-height: 100vh;
 
-            display: flex;
-            flex-direction: column;
+            background-color:
+                var(--bg-black);
 
-            /* IMAGEN DE FONDO DEL SITIO */
+            color:
+                var(--pure-white);
+
+            font-family:
+                'Space Grotesk',
+                sans-serif;
+
+            min-height:
+                100vh;
+
+            display:
+                flex;
+
+            flex-direction:
+                column;
+
+
+            /* FONDO GENERAL DEL SITIO */
+
             background-image:
+
                 linear-gradient(
                     rgba(0, 0, 0, 0.6),
                     rgba(0, 0, 0, 0.6)
                 ),
+
                 url('1.jpg');
 
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
+
+            background-size:
+                cover;
+
+            background-position:
+                center;
+
+            background-repeat:
+                no-repeat;
+
+            background-attachment:
+                fixed;
         }
 
+
         /* =========================================
-           ENCABEZADO PRINCIPAL
-        ========================================= */
+           ENCABEZADO
+        ========================================== */
 
         header {
-            text-align: center;
+
+            text-align:
+                center;
 
             padding:
                 1.5rem
@@ -78,121 +148,152 @@
                 1.8rem
                 1rem;
 
-            background: rgba(0, 0, 0, 0.88);
+            background:
+                rgba(0, 0, 0, 0.85);
 
             border-bottom:
-                3px double var(--pure-white);
+                3px double
+                var(--pure-white);
 
-            position: relative;
+            position:
+                relative;
 
-            backdrop-filter: blur(5px);
+            backdrop-filter:
+                blur(5px);
 
             box-shadow:
-                0 5px 25px rgba(0, 0, 0, 0.8);
+                0 5px 25px
+                rgba(0, 0, 0, 0.8);
         }
+
 
         /* =========================================
-           IMAGEN PRINCIPAL 6.JPG
-        ========================================= */
+           LOGOTIPO PRINCIPAL 6.PNG
+        ========================================== */
 
         .hero-logo {
-            width: 100%;
-            max-width: 1000px;
+
+            width:
+                100%;
+
+            max-width:
+                1000px;
 
             margin:
-                0 auto
-                1.5rem auto;
+                0 auto 1.5rem auto;
 
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            display:
+                flex;
 
-            padding: 0.5rem;
+            justify-content:
+                center;
+
+            align-items:
+                center;
+
+            padding:
+                0.5rem;
         }
 
+
         .hero-logo img {
-            display: block;
 
-            width: 100%;
-            max-width: 950px;
+            display:
+                block;
 
-            height: auto;
+            width:
+                100%;
 
-            object-fit: contain;
+            max-width:
+                950px;
 
-            margin: 0 auto;
+            height:
+                auto;
+
+            object-fit:
+                contain;
+
+            margin:
+                0 auto;
 
             filter:
-                drop-shadow(0 0 12px rgba(255,255,255,0.35))
-                drop-shadow(0 8px 18px rgba(0,0,0,0.8));
+                drop-shadow(
+                    0 0 12px
+                    rgba(255,255,255,0.35)
+                )
+
+                drop-shadow(
+                    0 8px 18px
+                    rgba(0,0,0,0.8)
+                );
 
             transition:
                 transform 0.35s ease,
                 filter 0.35s ease;
         }
 
+
         .hero-logo img:hover {
-            transform: scale(1.015);
+
+            transform:
+                scale(1.015);
 
             filter:
-                drop-shadow(0 0 20px rgba(255,255,255,0.5))
-                drop-shadow(0 10px 25px rgba(0,0,0,0.9));
+                drop-shadow(
+                    0 0 20px
+                    rgba(255,255,255,0.5)
+                )
+
+                drop-shadow(
+                    0 10px 25px
+                    rgba(0,0,0,0.9)
+                );
         }
 
-        /* =========================================
-           TÍTULO DE RESPALDO
-        ========================================= */
-
-        header h1 {
-            font-family: var(--psycho-font);
-
-            font-size:
-                clamp(2rem, 5vw, 4rem);
-
-            letter-spacing: 3px;
-
-            text-transform: uppercase;
-
-            color: var(--pure-white);
-
-            text-shadow:
-                0 0 12px rgba(255, 255, 255, 0.8),
-                3px 3px 0px #000,
-                5px 5px 0px #fff;
-
-            margin-bottom: 1.2rem;
-
-            word-wrap: break-word;
-        }
 
         /* =========================================
            NAVEGACIÓN
-        ========================================= */
+        ========================================== */
 
         nav {
-            display: flex;
 
-            justify-content: center;
+            display:
+                flex;
 
-            align-items: center;
+            justify-content:
+                center;
 
-            flex-wrap: wrap;
+            align-items:
+                center;
 
-            gap: 0.8rem;
+            flex-wrap:
+                wrap;
+
+            gap:
+                0.8rem;
         }
 
+
         nav a {
-            color: var(--off-white);
 
-            text-decoration: none;
+            color:
+                var(--off-white);
 
-            font-family: 'Cinzel', serif;
+            text-decoration:
+                none;
 
-            font-size: 0.85rem;
+            font-family:
+                'Cinzel',
+                serif;
 
-            font-weight: 700;
+            font-size:
+                0.85rem;
 
-            letter-spacing: 1.5px;
+            font-weight:
+                700;
+
+            letter-spacing:
+                1.5px;
 
             padding:
                 0.4rem
@@ -202,7 +303,8 @@
                 1px solid
                 var(--gray-border);
 
-            border-radius: 20px;
+            border-radius:
+                20px;
 
             transition:
                 all 0.3s ease;
@@ -211,8 +313,11 @@
                 rgba(0, 0, 0, 0.8);
         }
 
+
         nav a:hover {
-            color: #000;
+
+            color:
+                #000;
 
             background:
                 var(--pure-white);
@@ -225,34 +330,42 @@
                 var(--pure-white);
         }
 
+
         /* =========================================
            CONTENEDOR PRINCIPAL
-        ========================================= */
+        ========================================== */
 
         main {
-            max-width: 1400px;
 
-            width: 100%;
+            max-width:
+                1400px;
 
-            margin: 0 auto;
+            width:
+                100%;
+
+            margin:
+                0 auto;
 
             padding:
-                2rem
-                1rem;
+                2rem 1rem;
 
-            display: grid;
+            display:
+                grid;
 
             grid-template-columns:
                 repeat(12, 1fr);
 
-            gap: 1.5rem;
+            gap:
+                1.5rem;
         }
+
 
         /* =========================================
            SECCIONES
-        ========================================= */
+        ========================================== */
 
         .psycho-section {
+
             background-color:
                 var(--bg-dark-alpha);
 
@@ -266,7 +379,8 @@
                 20px
                 8px;
 
-            padding: 1.5rem;
+            padding:
+                1.5rem;
 
             backdrop-filter:
                 blur(4px);
@@ -280,18 +394,26 @@
                 box-shadow 0.3s ease;
         }
 
+
         .psycho-section:hover {
+
             box-shadow:
                 0 0 20px
                 rgba(255, 255, 255, 0.25);
         }
 
+
         .psycho-section h2 {
+
             font-family:
                 var(--psycho-font);
 
             font-size:
-                clamp(1.4rem, 2.5vw, 2rem);
+                clamp(
+                    1.4rem,
+                    2.5vw,
+                    2rem
+                );
 
             color:
                 var(--pure-white);
@@ -316,44 +438,55 @@
                 center;
         }
 
+
         /* =========================================
            DISTRIBUCIÓN DESKTOP
-        ========================================= */
+        ========================================== */
 
         #info-general {
-            grid-column: span 6;
+            grid-column:
+                span 6;
         }
 
         #autores {
-            grid-column: span 6;
+            grid-column:
+                span 6;
         }
 
         #poetas {
-            grid-column: span 12;
+            grid-column:
+                span 12;
         }
 
         #obras {
-            grid-column: span 7;
+            grid-column:
+                span 7;
         }
 
         #fotografias {
-            grid-column: span 5;
+            grid-column:
+                span 5;
         }
 
         #contacto {
-            grid-column: span 7;
+            grid-column:
+                span 7;
         }
 
         #redes {
-            grid-column: span 5;
+            grid-column:
+                span 5;
         }
+
 
         /* =========================================
            INFORMACIÓN GENERAL
-        ========================================= */
+        ========================================== */
 
         .info-box {
-            min-height: 160px;
+
+            min-height:
+                160px;
 
             border:
                 1px solid
@@ -369,12 +502,15 @@
                 var(--bg-card-alpha);
         }
 
+
         /* =========================================
            AUTORES
-        ========================================= */
+        ========================================== */
 
         .authors-grid {
-            display: grid;
+
+            display:
+                grid;
 
             grid-template-columns:
                 repeat(
@@ -382,30 +518,38 @@
                     minmax(130px, 1fr)
                 );
 
-            gap: 1rem;
+            gap:
+                1rem;
         }
+
 
         .author-card {
-            text-align: center;
+
+            text-align:
+                center;
         }
 
-        .author-photo-frame {
-            width: 110px;
 
-            height: 110px;
+        .author-photo-frame {
+
+            width:
+                110px;
+
+            height:
+                110px;
 
             margin:
-                0 auto
-                0.8rem
-                auto;
+                0 auto 0.8rem auto;
 
-            border-radius: 50%;
+            border-radius:
+                50%;
 
             border:
                 3px double
                 var(--pure-white);
 
-            padding: 4px;
+            padding:
+                4px;
 
             background:
                 radial-gradient(
@@ -418,63 +562,86 @@
                 0 0 10px
                 rgba(255, 255, 255, 0.2);
 
-            overflow: hidden;
+            overflow:
+                hidden;
 
-            display: flex;
+            display:
+                flex;
 
-            align-items: center;
+            align-items:
+                center;
 
-            justify-content: center;
+            justify-content:
+                center;
         }
 
+
         .author-photo-frame img {
-            width: 100%;
 
-            height: 100%;
+            width:
+                100%;
 
-            border-radius: 50%;
+            height:
+                100%;
 
-            object-fit: cover;
+            border-radius:
+                50%;
+
+            object-fit:
+                cover;
 
             filter:
                 grayscale(100%)
                 contrast(120%);
         }
 
+
         .author-card h3 {
-            font-size: 0.9rem;
+
+            font-size:
+                0.9rem;
 
             font-family:
                 'Cinzel',
                 serif;
 
-            letter-spacing: 1px;
+            letter-spacing:
+                1px;
 
             border:
                 1px solid
                 var(--gray-border);
 
-            padding: 0.3rem;
+            padding:
+                0.3rem;
 
-            border-radius: 10px;
+            border-radius:
+                10px;
 
-            background: #000;
+            background:
+                #000;
         }
+
 
         /* =========================================
            POETAS
-        ========================================= */
+        ========================================== */
 
         .poets-grid {
-            display: grid;
+
+            display:
+                grid;
 
             grid-template-columns:
                 repeat(5, 1fr);
 
-            gap: 1rem;
+            gap:
+                1rem;
         }
 
+
         .poet-card {
+
             border:
                 1px solid
                 var(--pure-white);
@@ -494,7 +661,8 @@
             min-height:
                 120px;
 
-            display: flex;
+            display:
+                flex;
 
             flex-direction:
                 column;
@@ -503,7 +671,9 @@
                 space-between;
         }
 
+
         .poet-card .number {
+
             font-family:
                 'Cinzel',
                 serif;
@@ -515,14 +685,17 @@
                 1px solid
                 var(--pure-white);
 
-            width: 24px;
+            width:
+                24px;
 
-            height: 24px;
+            height:
+                24px;
 
             border-radius:
                 50%;
 
-            display: flex;
+            display:
+                flex;
 
             align-items:
                 center;
@@ -537,7 +710,9 @@
                 0.4rem;
         }
 
+
         .poet-card .name-slot {
+
             font-size:
                 0.8rem;
 
@@ -552,12 +727,15 @@
                 0.4rem;
         }
 
+
         /* =========================================
            GALERÍAS
-        ========================================= */
+        ========================================== */
 
         .gallery-grid {
-            display: grid;
+
+            display:
+                grid;
 
             grid-template-columns:
                 repeat(
@@ -569,7 +747,9 @@
                 0.8rem;
         }
 
+
         .gallery-item {
+
             aspect-ratio:
                 1 / 1;
 
@@ -586,7 +766,8 @@
             overflow:
                 hidden;
 
-            display: flex;
+            display:
+                flex;
 
             align-items:
                 center;
@@ -595,7 +776,9 @@
                 center;
         }
 
+
         .gallery-item img {
+
             width:
                 100%;
 
@@ -612,17 +795,22 @@
                 filter 0.3s ease;
         }
 
+
         .gallery-item img:hover {
+
             filter:
                 grayscale(0%);
         }
 
+
         /* =========================================
            FORMULARIO
-        ========================================= */
+        ========================================== */
 
         .formsubmit-container {
-            display: flex;
+
+            display:
+                flex;
 
             flex-direction:
                 column;
@@ -631,8 +819,11 @@
                 1rem;
         }
 
+
         .form-group {
-            display: flex;
+
+            display:
+                flex;
 
             flex-direction:
                 column;
@@ -641,7 +832,9 @@
                 0.3rem;
         }
 
+
         .form-group label {
+
             font-family:
                 'Cinzel',
                 serif;
@@ -653,8 +846,10 @@
                 1px;
         }
 
+
         .form-group input,
         .form-group textarea {
+
             background-color:
                 rgba(0, 0, 0, 0.85);
 
@@ -681,14 +876,18 @@
                 100%;
         }
 
+
         .form-group input:focus,
         .form-group textarea:focus {
+
             box-shadow:
                 0 0 10px
                 rgba(255, 255, 255, 0.5);
         }
 
+
         .file-upload-btn {
+
             background:
                 rgba(0, 0, 0, 0.85);
 
@@ -706,7 +905,9 @@
                 pointer;
         }
 
+
         button[type="submit"] {
+
             background-color:
                 var(--pure-white);
 
@@ -749,7 +950,9 @@
                 0.5rem;
         }
 
+
         button[type="submit"]:hover {
+
             background-color:
                 #000;
 
@@ -761,12 +964,15 @@
                 var(--pure-white);
         }
 
+
         /* =========================================
            REDES SOCIALES
-        ========================================= */
+        ========================================== */
 
         .social-box {
-            display: flex;
+
+            display:
+                flex;
 
             flex-direction:
                 column;
@@ -784,7 +990,9 @@
                 1rem 0;
         }
 
+
         .social-link {
+
             width:
                 100%;
 
@@ -824,7 +1032,9 @@
                 all 0.3s ease;
         }
 
+
         .social-link:hover {
+
             background:
                 var(--pure-white);
 
@@ -839,11 +1049,13 @@
                 var(--pure-white);
         }
 
+
         /* =========================================
            PIE DE PÁGINA
-        ========================================= */
+        ========================================== */
 
         footer {
+
             text-align:
                 center;
 
@@ -871,34 +1083,42 @@
                 auto;
         }
 
+
         /* =========================================
            TABLET
-        ========================================= */
+        ========================================== */
 
         @media (max-width: 992px) {
 
             main {
-                display: flex;
+
+                display:
+                    flex;
 
                 flex-direction:
                     column;
 
                 padding:
-                    1rem
-                    0.8rem;
+                    1rem 0.8rem;
             }
 
+
             .psycho-section {
+
                 width:
                     100%;
             }
 
+
             body {
+
                 background-attachment:
                     scroll;
             }
 
+
             .hero-logo {
+
                 max-width:
                     850px;
 
@@ -906,24 +1126,30 @@
                     0.3rem;
             }
 
+
             .hero-logo img {
+
                 max-width:
                     850px;
             }
         }
 
+
         /* =========================================
            TABLET PEQUEÑA
-        ========================================= */
+        ========================================== */
 
         @media (max-width: 768px) {
 
             .poets-grid {
+
                 grid-template-columns:
                     repeat(2, 1fr);
             }
 
+
             header {
+
                 padding:
                     1rem
                     0.6rem
@@ -931,34 +1157,30 @@
                     0.6rem;
             }
 
+
             .hero-logo {
+
                 margin-bottom:
                     1rem;
             }
 
+
             .hero-logo img {
+
                 width:
                     100%;
             }
 
-            header h1 {
-                font-size:
-                    clamp(
-                        1.7rem,
-                        8vw,
-                        2.8rem
-                    );
-
-                letter-spacing:
-                    2px;
-            }
 
             nav {
+
                 gap:
                     0.5rem;
             }
 
+
             nav a {
+
                 font-size:
                     0.72rem;
 
@@ -968,13 +1190,15 @@
             }
         }
 
+
         /* =========================================
            CELULARES
-        ========================================= */
+        ========================================== */
 
         @media (max-width: 480px) {
 
             .hero-logo {
+
                 padding:
                     0;
 
@@ -982,7 +1206,9 @@
                     0.8rem;
             }
 
+
             .hero-logo img {
+
                 width:
                     100%;
 
@@ -990,15 +1216,9 @@
                     100%;
             }
 
-            header h1 {
-                font-size:
-                    1.65rem;
-
-                margin-bottom:
-                    1rem;
-            }
 
             nav a {
+
                 font-size:
                     0.65rem;
 
@@ -1010,23 +1230,31 @@
                     0.55rem;
             }
 
+
             main {
+
                 padding:
                     0.8rem
                     0.5rem;
             }
 
+
             .psycho-section {
+
                 padding:
                     1rem;
             }
 
+
             .poets-grid {
+
                 grid-template-columns:
                     repeat(2, 1fr);
             }
 
+
             footer {
+
                 font-size:
                     0.65rem;
 
@@ -1037,38 +1265,52 @@
         }
 
     </style>
+
 </head>
+
 
 <body>
 
+
     <!-- =========================================
          ENCABEZADO
-    ========================================= -->
+    ========================================== -->
 
     <header>
 
+
         <!--
-            IMAGEN PRINCIPAL DEL SITIO
+            LOGOTIPO PRINCIPAL
 
-            IMPORTANTE:
-            El archivo debe llamarse exactamente:
+            El archivo debe llamarse:
 
-            6.jpg
+            6.png
 
-            y debe estar en la misma carpeta que index.html.
+            y estar en la misma carpeta
+            que index.html.
         -->
 
         <div class="hero-logo">
+
             <img
-                src="6.jpg"
+                src="6.png"
                 alt="El Conjuro de las Ranas"
             >
+
         </div>
 
-        <!-- TÍTULO DE RESPALDO / ACCESIBILIDAD -->
-        <h1>El Conjuro de las Ranas</h1>
 
-        <!-- NAVEGACIÓN -->
+        <!--
+            IMPORTANTE:
+            Aquí NO colocamos otro <h1>.
+            El nombre ya está incluido
+            dentro de 6.png.
+        -->
+
+
+        <!-- =====================================
+             NAVEGACIÓN
+        ====================================== -->
 
         <nav>
 
@@ -1107,7 +1349,7 @@
 
     <!-- =========================================
          CONTENIDO PRINCIPAL
-    ========================================= -->
+    ========================================== -->
 
     <main>
 
@@ -1126,11 +1368,6 @@
             </h2>
 
             <div class="info-box">
-
-                <!--
-                    Espacio listo para agregar
-                    texto informativo.
-                -->
 
             </div>
 
@@ -1236,53 +1473,112 @@
 
 
                 <div class="poet-card">
-                    <span class="number">1</span>
+
+                    <span class="number">
+                        1
+                    </span>
+
                     <div class="name-slot"></div>
+
                 </div>
 
-                <div class="poet-card">
-                    <span class="number">2</span>
-                    <div class="name-slot"></div>
-                </div>
 
                 <div class="poet-card">
-                    <span class="number">3</span>
+
+                    <span class="number">
+                        2
+                    </span>
+
                     <div class="name-slot"></div>
+
                 </div>
 
-                <div class="poet-card">
-                    <span class="number">4</span>
-                    <div class="name-slot"></div>
-                </div>
 
                 <div class="poet-card">
-                    <span class="number">5</span>
+
+                    <span class="number">
+                        3
+                    </span>
+
                     <div class="name-slot"></div>
+
                 </div>
 
-                <div class="poet-card">
-                    <span class="number">6</span>
-                    <div class="name-slot"></div>
-                </div>
 
                 <div class="poet-card">
-                    <span class="number">7</span>
+
+                    <span class="number">
+                        4
+                    </span>
+
                     <div class="name-slot"></div>
+
                 </div>
 
-                <div class="poet-card">
-                    <span class="number">8</span>
-                    <div class="name-slot"></div>
-                </div>
 
                 <div class="poet-card">
-                    <span class="number">9</span>
+
+                    <span class="number">
+                        5
+                    </span>
+
                     <div class="name-slot"></div>
+
                 </div>
 
+
                 <div class="poet-card">
-                    <span class="number">10</span>
+
+                    <span class="number">
+                        6
+                    </span>
+
                     <div class="name-slot"></div>
+
+                </div>
+
+
+                <div class="poet-card">
+
+                    <span class="number">
+                        7
+                    </span>
+
+                    <div class="name-slot"></div>
+
+                </div>
+
+
+                <div class="poet-card">
+
+                    <span class="number">
+                        8
+                    </span>
+
+                    <div class="name-slot"></div>
+
+                </div>
+
+
+                <div class="poet-card">
+
+                    <span class="number">
+                        9
+                    </span>
+
+                    <div class="name-slot"></div>
+
+                </div>
+
+
+                <div class="poet-card">
+
+                    <span class="number">
+                        10
+                    </span>
+
+                    <div class="name-slot"></div>
+
                 </div>
 
 
@@ -1306,47 +1602,66 @@
 
             <div class="gallery-grid">
 
-                <div class="gallery-item">
-                    <img
-                        src=""
-                        alt=""
-                    >
-                </div>
 
                 <div class="gallery-item">
+
                     <img
                         src=""
                         alt=""
                     >
+
                 </div>
 
-                <div class="gallery-item">
-                    <img
-                        src=""
-                        alt=""
-                    >
-                </div>
 
                 <div class="gallery-item">
+
                     <img
                         src=""
                         alt=""
                     >
+
                 </div>
 
-                <div class="gallery-item">
-                    <img
-                        src=""
-                        alt=""
-                    >
-                </div>
 
                 <div class="gallery-item">
+
                     <img
                         src=""
                         alt=""
                     >
+
                 </div>
+
+
+                <div class="gallery-item">
+
+                    <img
+                        src=""
+                        alt=""
+                    >
+
+                </div>
+
+
+                <div class="gallery-item">
+
+                    <img
+                        src=""
+                        alt=""
+                    >
+
+                </div>
+
+
+                <div class="gallery-item">
+
+                    <img
+                        src=""
+                        alt=""
+                    >
+
+                </div>
+
 
             </div>
 
@@ -1368,33 +1683,46 @@
 
             <div class="gallery-grid">
 
-                <div class="gallery-item">
-                    <img
-                        src=""
-                        alt=""
-                    >
-                </div>
 
                 <div class="gallery-item">
+
                     <img
                         src=""
                         alt=""
                     >
+
                 </div>
 
-                <div class="gallery-item">
-                    <img
-                        src=""
-                        alt=""
-                    >
-                </div>
 
                 <div class="gallery-item">
+
                     <img
                         src=""
                         alt=""
                     >
+
                 </div>
+
+
+                <div class="gallery-item">
+
+                    <img
+                        src=""
+                        alt=""
+                    >
+
+                </div>
+
+
+                <div class="gallery-item">
+
+                    <img
+                        src=""
+                        alt=""
+                    >
+
+                </div>
+
 
             </div>
 
@@ -1402,7 +1730,7 @@
 
 
         <!-- =====================================
-             6. CONTACTO / FORMSUBMIT
+             6. CONTACTO
         ====================================== -->
 
         <section
@@ -1562,7 +1890,7 @@
 
     <!-- =========================================
          PIE DE PÁGINA
-    ========================================= -->
+    ========================================== -->
 
     <footer>
 
@@ -1575,4 +1903,5 @@
 
 
 </body>
+
 </html>
