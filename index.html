@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Conjuro de las Ranas</title>
-    
-    <!-- FUENTES GOOGLE: Incluye fuentes con estética psicodélica/groovy retro -->
+
+    <!-- FUENTES GOOGLE -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Rubik+Moonrocks&family=Shrikhand&family=Space+Grotesk:wght@300;400;600&display=swap" rel="stylesheet">
-    
+
     <style>
-        /* RESET & VARIABLES EN BLANCO Y NEGRO */
+
+        /* =========================================
+           RESET & VARIABLES
+        ========================================= */
+
         * {
             margin: 0;
             padding: 0;
@@ -26,156 +30,358 @@
             --off-white: #e0e0e0;
             --gray-border: #555555;
             --gray-light: #aaaaaa;
-            
-            /* Tipografía psicodélica aplicada a los títulos principales */
-            --psycho-font: 'Rubik Moonrocks', 'Shrikhand', cursive, sans-serif;
+
+            --psycho-font:
+                'Rubik Moonrocks',
+                'Shrikhand',
+                cursive,
+                sans-serif;
         }
+
+        /* =========================================
+           CUERPO DE LA PÁGINA
+        ========================================= */
 
         body {
             background-color: var(--bg-black);
             color: var(--pure-white);
             font-family: 'Space Grotesk', sans-serif;
             min-height: 100vh;
+
             display: flex;
             flex-direction: column;
-            
-            /* IMAGEN DE FONDO DE TODO EL SITIO (1.jpg) */
-            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('1.jpg');
+
+            /* IMAGEN DE FONDO DEL SITIO */
+            background-image:
+                linear-gradient(
+                    rgba(0, 0, 0, 0.6),
+                    rgba(0, 0, 0, 0.6)
+                ),
+                url('1.jpg');
+
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             background-attachment: fixed;
         }
 
-        /* ENCABEZADO PSICODÉLICO */
+        /* =========================================
+           ENCABEZADO PRINCIPAL
+        ========================================= */
+
         header {
             text-align: center;
-            padding: 2.5rem 1rem 1.8rem 1rem;
-            background: rgba(0, 0, 0, 0.85);
-            border-bottom: 3px double var(--pure-white);
+
+            padding:
+                1.5rem
+                1rem
+                1.8rem
+                1rem;
+
+            background: rgba(0, 0, 0, 0.88);
+
+            border-bottom:
+                3px double var(--pure-white);
+
             position: relative;
+
             backdrop-filter: blur(5px);
-            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.8);
+
+            box-shadow:
+                0 5px 25px rgba(0, 0, 0, 0.8);
         }
+
+        /* =========================================
+           IMAGEN PRINCIPAL 6.JPG
+        ========================================= */
+
+        .hero-logo {
+            width: 100%;
+            max-width: 1000px;
+
+            margin:
+                0 auto
+                1.5rem auto;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 0.5rem;
+        }
+
+        .hero-logo img {
+            display: block;
+
+            width: 100%;
+            max-width: 950px;
+
+            height: auto;
+
+            object-fit: contain;
+
+            margin: 0 auto;
+
+            filter:
+                drop-shadow(0 0 12px rgba(255,255,255,0.35))
+                drop-shadow(0 8px 18px rgba(0,0,0,0.8));
+
+            transition:
+                transform 0.35s ease,
+                filter 0.35s ease;
+        }
+
+        .hero-logo img:hover {
+            transform: scale(1.015);
+
+            filter:
+                drop-shadow(0 0 20px rgba(255,255,255,0.5))
+                drop-shadow(0 10px 25px rgba(0,0,0,0.9));
+        }
+
+        /* =========================================
+           TÍTULO DE RESPALDO
+        ========================================= */
 
         header h1 {
             font-family: var(--psycho-font);
-            font-size: clamp(2.2rem, 5vw, 4rem);
+
+            font-size:
+                clamp(2rem, 5vw, 4rem);
+
             letter-spacing: 3px;
+
             text-transform: uppercase;
+
             color: var(--pure-white);
-            text-shadow: 
+
+            text-shadow:
                 0 0 12px rgba(255, 255, 255, 0.8),
                 3px 3px 0px #000,
                 5px 5px 0px #fff;
+
             margin-bottom: 1.2rem;
+
             word-wrap: break-word;
         }
 
+        /* =========================================
+           NAVEGACIÓN
+        ========================================= */
+
         nav {
             display: flex;
+
             justify-content: center;
+
+            align-items: center;
+
             flex-wrap: wrap;
+
             gap: 0.8rem;
         }
 
         nav a {
             color: var(--off-white);
+
             text-decoration: none;
+
             font-family: 'Cinzel', serif;
+
             font-size: 0.85rem;
+
             font-weight: 700;
+
             letter-spacing: 1.5px;
-            padding: 0.4rem 0.9rem;
-            border: 1px solid var(--gray-border);
+
+            padding:
+                0.4rem
+                0.9rem;
+
+            border:
+                1px solid
+                var(--gray-border);
+
             border-radius: 20px;
-            transition: all 0.3s ease;
-            background: rgba(0, 0, 0, 0.8);
+
+            transition:
+                all 0.3s ease;
+
+            background:
+                rgba(0, 0, 0, 0.8);
         }
 
         nav a:hover {
             color: #000;
-            background: var(--pure-white);
-            border-color: var(--pure-white);
-            box-shadow: 0 0 15px var(--pure-white);
+
+            background:
+                var(--pure-white);
+
+            border-color:
+                var(--pure-white);
+
+            box-shadow:
+                0 0 15px
+                var(--pure-white);
         }
 
-        /* CONTENEDOR PRINCIPAL GRÁFICO */
+        /* =========================================
+           CONTENEDOR PRINCIPAL
+        ========================================= */
+
         main {
             max-width: 1400px;
+
             width: 100%;
+
             margin: 0 auto;
-            padding: 2rem 1rem;
+
+            padding:
+                2rem
+                1rem;
+
             display: grid;
-            grid-template-columns: repeat(12, 1fr);
+
+            grid-template-columns:
+                repeat(12, 1fr);
+
             gap: 1.5rem;
         }
 
-        /* ESTILO GENERAL DE SECCIONES CON MARCOS PSICODÉLICOS */
+        /* =========================================
+           SECCIONES
+        ========================================= */
+
         .psycho-section {
-            background-color: var(--bg-dark-alpha);
-            border: 2px solid var(--pure-white);
-            border-radius: 20px 8px 20px 8px;
+            background-color:
+                var(--bg-dark-alpha);
+
+            border:
+                2px solid
+                var(--pure-white);
+
+            border-radius:
+                20px
+                8px
+                20px
+                8px;
+
             padding: 1.5rem;
-            backdrop-filter: blur(4px);
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.7);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+            backdrop-filter:
+                blur(4px);
+
+            box-shadow:
+                0 8px 32px
+                rgba(0, 0, 0, 0.7);
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
         }
 
         .psycho-section:hover {
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.25);
+            box-shadow:
+                0 0 20px
+                rgba(255, 255, 255, 0.25);
         }
 
         .psycho-section h2 {
-            font-family: var(--psycho-font);
-            font-size: clamp(1.4rem, 2.5vw, 2rem);
-            color: var(--pure-white);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin-bottom: 1.2rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 1px dashed var(--pure-white);
-            text-align: center;
+            font-family:
+                var(--psycho-font);
+
+            font-size:
+                clamp(1.4rem, 2.5vw, 2rem);
+
+            color:
+                var(--pure-white);
+
+            text-transform:
+                uppercase;
+
+            letter-spacing:
+                2px;
+
+            margin-bottom:
+                1.2rem;
+
+            padding-bottom:
+                0.5rem;
+
+            border-bottom:
+                1px dashed
+                var(--pure-white);
+
+            text-align:
+                center;
         }
 
-        /* DISTRIBUCIÓN EN GRID RESPONSIVA (PC / LAPTOP) */
-        #info-general { grid-column: span 6; }
-        #autores { grid-column: span 6; }
-        #poetas { grid-column: span 12; }
-        #obras { grid-column: span 7; }
-        #fotografias { grid-column: span 5; }
-        #contacto { grid-column: span 7; }
-        #redes { grid-column: span 5; }
+        /* =========================================
+           DISTRIBUCIÓN DESKTOP
+        ========================================= */
 
-        @media (max-width: 992px) {
-            main {
-                display: flex;
-                flex-direction: column;
-                padding: 1rem 0.8rem;
-            }
-
-            .psycho-section {
-                width: 100%;
-            }
-
-            body {
-                background-attachment: scroll;
-            }
+        #info-general {
+            grid-column: span 6;
         }
 
-        /* 1. INFO GENERAL */
+        #autores {
+            grid-column: span 6;
+        }
+
+        #poetas {
+            grid-column: span 12;
+        }
+
+        #obras {
+            grid-column: span 7;
+        }
+
+        #fotografias {
+            grid-column: span 5;
+        }
+
+        #contacto {
+            grid-column: span 7;
+        }
+
+        #redes {
+            grid-column: span 5;
+        }
+
+        /* =========================================
+           INFORMACIÓN GENERAL
+        ========================================= */
+
         .info-box {
             min-height: 160px;
-            border: 1px solid var(--gray-border);
-            border-radius: 12px;
-            padding: 1.2rem;
-            background: var(--bg-card-alpha);
+
+            border:
+                1px solid
+                var(--gray-border);
+
+            border-radius:
+                12px;
+
+            padding:
+                1.2rem;
+
+            background:
+                var(--bg-card-alpha);
         }
 
-        /* 2. AUTORES */
+        /* =========================================
+           AUTORES
+        ========================================= */
+
         .authors-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+
+            grid-template-columns:
+                repeat(
+                    auto-fit,
+                    minmax(130px, 1fr)
+                );
+
             gap: 1rem;
         }
 
@@ -185,364 +391,1188 @@
 
         .author-photo-frame {
             width: 110px;
+
             height: 110px;
-            margin: 0 auto 0.8rem auto;
+
+            margin:
+                0 auto
+                0.8rem
+                auto;
+
             border-radius: 50%;
-            border: 3px double var(--pure-white);
+
+            border:
+                3px double
+                var(--pure-white);
+
             padding: 4px;
-            background: radial-gradient(circle, #222 0%, #000 100%);
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+
+            background:
+                radial-gradient(
+                    circle,
+                    #222 0%,
+                    #000 100%
+                );
+
+            box-shadow:
+                0 0 10px
+                rgba(255, 255, 255, 0.2);
+
             overflow: hidden;
+
             display: flex;
+
             align-items: center;
+
             justify-content: center;
         }
 
         .author-photo-frame img {
             width: 100%;
+
             height: 100%;
+
             border-radius: 50%;
+
             object-fit: cover;
-            filter: grayscale(100%) contrast(120%);
+
+            filter:
+                grayscale(100%)
+                contrast(120%);
         }
 
         .author-card h3 {
             font-size: 0.9rem;
-            font-family: 'Cinzel', serif;
+
+            font-family:
+                'Cinzel',
+                serif;
+
             letter-spacing: 1px;
-            border: 1px solid var(--gray-border);
+
+            border:
+                1px solid
+                var(--gray-border);
+
             padding: 0.3rem;
+
             border-radius: 10px;
+
             background: #000;
         }
 
-        /* 3. POETAS SELECCIONADOS (10 CASILLEROS) */
+        /* =========================================
+           POETAS
+        ========================================= */
+
         .poets-grid {
             display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 1rem;
-        }
 
-        @media (max-width: 768px) {
-            .poets-grid { 
-                grid-template-columns: repeat(2, 1fr); 
-            }
+            grid-template-columns:
+                repeat(5, 1fr);
+
+            gap: 1rem;
         }
 
         .poet-card {
-            border: 1px solid var(--pure-white);
-            border-radius: 10px;
-            padding: 0.8rem;
-            background: var(--bg-card-alpha);
-            text-align: center;
-            min-height: 120px;
+            border:
+                1px solid
+                var(--pure-white);
+
+            border-radius:
+                10px;
+
+            padding:
+                0.8rem;
+
+            background:
+                var(--bg-card-alpha);
+
+            text-align:
+                center;
+
+            min-height:
+                120px;
+
             display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+
+            flex-direction:
+                column;
+
+            justify-content:
+                space-between;
         }
 
         .poet-card .number {
-            font-family: 'Cinzel', serif;
-            font-weight: bold;
-            border: 1px solid var(--pure-white);
+            font-family:
+                'Cinzel',
+                serif;
+
+            font-weight:
+                bold;
+
+            border:
+                1px solid
+                var(--pure-white);
+
             width: 24px;
+
             height: 24px;
-            border-radius: 50%;
+
+            border-radius:
+                50%;
+
             display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.75rem;
-            margin-bottom: 0.4rem;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            font-size:
+                0.75rem;
+
+            margin-bottom:
+                0.4rem;
         }
 
         .poet-card .name-slot {
-            font-size: 0.8rem;
-            color: var(--gray-light);
-            border-top: 1px dashed var(--gray-border);
-            padding-top: 0.4rem;
+            font-size:
+                0.8rem;
+
+            color:
+                var(--gray-light);
+
+            border-top:
+                1px dashed
+                var(--gray-border);
+
+            padding-top:
+                0.4rem;
         }
 
-        /* 4 & 5. GALERÍAS (OBRAS Y FOTOGRAFÍAS) */
+        /* =========================================
+           GALERÍAS
+        ========================================= */
+
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-            gap: 0.8rem;
+
+            grid-template-columns:
+                repeat(
+                    auto-fit,
+                    minmax(120px, 1fr)
+                );
+
+            gap:
+                0.8rem;
         }
 
         .gallery-item {
-            aspect-ratio: 1 / 1;
-            border: 2px solid var(--pure-white);
-            border-radius: 10px;
-            background: var(--bg-card-alpha);
-            overflow: hidden;
+            aspect-ratio:
+                1 / 1;
+
+            border:
+                2px solid
+                var(--pure-white);
+
+            border-radius:
+                10px;
+
+            background:
+                var(--bg-card-alpha);
+
+            overflow:
+                hidden;
+
             display: flex;
-            align-items: center;
-            justify-content: center;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
         }
 
         .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: grayscale(100%);
-            transition: filter 0.3s ease;
+            width:
+                100%;
+
+            height:
+                100%;
+
+            object-fit:
+                cover;
+
+            filter:
+                grayscale(100%);
+
+            transition:
+                filter 0.3s ease;
         }
 
         .gallery-item img:hover {
-            filter: grayscale(0%);
+            filter:
+                grayscale(0%);
         }
 
-        /* 6. FORMULARIO FORMSUBMIT */
+        /* =========================================
+           FORMULARIO
+        ========================================= */
+
         .formsubmit-container {
             display: flex;
-            flex-direction: column;
-            gap: 1rem;
+
+            flex-direction:
+                column;
+
+            gap:
+                1rem;
         }
 
         .form-group {
             display: flex;
-            flex-direction: column;
-            gap: 0.3rem;
+
+            flex-direction:
+                column;
+
+            gap:
+                0.3rem;
         }
 
         .form-group label {
-            font-family: 'Cinzel', serif;
-            font-size: 0.8rem;
-            letter-spacing: 1px;
+            font-family:
+                'Cinzel',
+                serif;
+
+            font-size:
+                0.8rem;
+
+            letter-spacing:
+                1px;
         }
 
-        .form-group input, 
+        .form-group input,
         .form-group textarea {
-            background-color: rgba(0, 0, 0, 0.85);
-            border: 1px solid var(--pure-white);
-            border-radius: 8px;
-            color: var(--pure-white);
-            padding: 0.7rem;
-            font-family: inherit;
-            outline: none;
-            width: 100%;
+            background-color:
+                rgba(0, 0, 0, 0.85);
+
+            border:
+                1px solid
+                var(--pure-white);
+
+            border-radius:
+                8px;
+
+            color:
+                var(--pure-white);
+
+            padding:
+                0.7rem;
+
+            font-family:
+                inherit;
+
+            outline:
+                none;
+
+            width:
+                100%;
         }
 
-        .form-group input:focus, 
+        .form-group input:focus,
         .form-group textarea:focus {
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            box-shadow:
+                0 0 10px
+                rgba(255, 255, 255, 0.5);
         }
 
         .file-upload-btn {
-            background: rgba(0, 0, 0, 0.85);
-            border: 1px dashed var(--pure-white);
-            padding: 0.8rem;
-            border-radius: 8px;
-            cursor: pointer;
+            background:
+                rgba(0, 0, 0, 0.85);
+
+            border:
+                1px dashed
+                var(--pure-white);
+
+            padding:
+                0.8rem;
+
+            border-radius:
+                8px;
+
+            cursor:
+                pointer;
         }
 
         button[type="submit"] {
-            background-color: var(--pure-white);
-            color: #000;
-            font-family: 'Cinzel', serif;
-            font-weight: bold;
-            font-size: 0.95rem;
-            letter-spacing: 2px;
-            border: 2px solid var(--pure-white);
-            padding: 0.8rem 2rem;
-            border-radius: 25px;
-            cursor: pointer;
-            text-transform: uppercase;
-            transition: all 0.3s ease;
-            margin-top: 0.5rem;
+            background-color:
+                var(--pure-white);
+
+            color:
+                #000;
+
+            font-family:
+                'Cinzel',
+                serif;
+
+            font-weight:
+                bold;
+
+            font-size:
+                0.95rem;
+
+            letter-spacing:
+                2px;
+
+            border:
+                2px solid
+                var(--pure-white);
+
+            padding:
+                0.8rem 2rem;
+
+            border-radius:
+                25px;
+
+            cursor:
+                pointer;
+
+            text-transform:
+                uppercase;
+
+            transition:
+                all 0.3s ease;
+
+            margin-top:
+                0.5rem;
         }
 
         button[type="submit"]:hover {
-            background-color: #000;
-            color: var(--pure-white);
-            box-shadow: 0 0 15px var(--pure-white);
+            background-color:
+                #000;
+
+            color:
+                var(--pure-white);
+
+            box-shadow:
+                0 0 15px
+                var(--pure-white);
         }
 
-        /* 7. REDES SOCIALES */
+        /* =========================================
+           REDES SOCIALES
+        ========================================= */
+
         .social-box {
             display: flex;
-            flex-direction: column;
-            gap: 0.8rem;
-            align-items: center;
-            justify-content: center;
-            padding: 1rem 0;
+
+            flex-direction:
+                column;
+
+            gap:
+                0.8rem;
+
+            align-items:
+                center;
+
+            justify-content:
+                center;
+
+            padding:
+                1rem 0;
         }
 
         .social-link {
-            width: 100%;
-            max-width: 220px;
-            text-align: center;
-            padding: 0.7rem 1.2rem;
-            border: 2px solid var(--pure-white);
-            border-radius: 30px;
-            color: var(--pure-white);
-            text-decoration: none;
-            font-family: 'Cinzel', serif;
-            letter-spacing: 1.5px;
-            background: rgba(0, 0, 0, 0.85);
-            transition: all 0.3s ease;
+            width:
+                100%;
+
+            max-width:
+                220px;
+
+            text-align:
+                center;
+
+            padding:
+                0.7rem 1.2rem;
+
+            border:
+                2px solid
+                var(--pure-white);
+
+            border-radius:
+                30px;
+
+            color:
+                var(--pure-white);
+
+            text-decoration:
+                none;
+
+            font-family:
+                'Cinzel',
+                serif;
+
+            letter-spacing:
+                1.5px;
+
+            background:
+                rgba(0, 0, 0, 0.85);
+
+            transition:
+                all 0.3s ease;
         }
 
         .social-link:hover {
-            background: var(--pure-white);
-            color: #000;
-            transform: scale(1.03);
-            box-shadow: 0 0 15px var(--pure-white);
+            background:
+                var(--pure-white);
+
+            color:
+                #000;
+
+            transform:
+                scale(1.03);
+
+            box-shadow:
+                0 0 15px
+                var(--pure-white);
         }
 
-        /* PIE DE PÁGINA */
+        /* =========================================
+           PIE DE PÁGINA
+        ========================================= */
+
         footer {
-            text-align: center;
-            padding: 1.5rem;
-            border-top: 2px double var(--pure-white);
-            font-family: 'Cinzel', serif;
-            font-size: 0.8rem;
-            letter-spacing: 2px;
-            background: rgba(0, 0, 0, 0.9);
-            margin-top: auto;
+            text-align:
+                center;
+
+            padding:
+                1.5rem;
+
+            border-top:
+                2px double
+                var(--pure-white);
+
+            font-family:
+                'Cinzel',
+                serif;
+
+            font-size:
+                0.8rem;
+
+            letter-spacing:
+                2px;
+
+            background:
+                rgba(0, 0, 0, 0.9);
+
+            margin-top:
+                auto;
         }
+
+        /* =========================================
+           TABLET
+        ========================================= */
+
+        @media (max-width: 992px) {
+
+            main {
+                display: flex;
+
+                flex-direction:
+                    column;
+
+                padding:
+                    1rem
+                    0.8rem;
+            }
+
+            .psycho-section {
+                width:
+                    100%;
+            }
+
+            body {
+                background-attachment:
+                    scroll;
+            }
+
+            .hero-logo {
+                max-width:
+                    850px;
+
+                padding:
+                    0.3rem;
+            }
+
+            .hero-logo img {
+                max-width:
+                    850px;
+            }
+        }
+
+        /* =========================================
+           TABLET PEQUEÑA
+        ========================================= */
+
+        @media (max-width: 768px) {
+
+            .poets-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            header {
+                padding:
+                    1rem
+                    0.6rem
+                    1.3rem
+                    0.6rem;
+            }
+
+            .hero-logo {
+                margin-bottom:
+                    1rem;
+            }
+
+            .hero-logo img {
+                width:
+                    100%;
+            }
+
+            header h1 {
+                font-size:
+                    clamp(
+                        1.7rem,
+                        8vw,
+                        2.8rem
+                    );
+
+                letter-spacing:
+                    2px;
+            }
+
+            nav {
+                gap:
+                    0.5rem;
+            }
+
+            nav a {
+                font-size:
+                    0.72rem;
+
+                padding:
+                    0.35rem
+                    0.65rem;
+            }
+        }
+
+        /* =========================================
+           CELULARES
+        ========================================= */
+
+        @media (max-width: 480px) {
+
+            .hero-logo {
+                padding:
+                    0;
+
+                margin-bottom:
+                    0.8rem;
+            }
+
+            .hero-logo img {
+                width:
+                    100%;
+
+                max-width:
+                    100%;
+            }
+
+            header h1 {
+                font-size:
+                    1.65rem;
+
+                margin-bottom:
+                    1rem;
+            }
+
+            nav a {
+                font-size:
+                    0.65rem;
+
+                letter-spacing:
+                    0.8px;
+
+                padding:
+                    0.3rem
+                    0.55rem;
+            }
+
+            main {
+                padding:
+                    0.8rem
+                    0.5rem;
+            }
+
+            .psycho-section {
+                padding:
+                    1rem;
+            }
+
+            .poets-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            footer {
+                font-size:
+                    0.65rem;
+
+                padding:
+                    1rem
+                    0.5rem;
+            }
+        }
+
     </style>
 </head>
+
 <body>
 
-    <!-- ENCABEZADO Y NAVEGACIÓN -->
+    <!-- =========================================
+         ENCABEZADO
+    ========================================= -->
+
     <header>
+
+        <!--
+            IMAGEN PRINCIPAL DEL SITIO
+
+            IMPORTANTE:
+            El archivo debe llamarse exactamente:
+
+            6.jpg
+
+            y debe estar en la misma carpeta que index.html.
+        -->
+
+        <div class="hero-logo">
+            <img
+                src="6.jpg"
+                alt="El Conjuro de las Ranas"
+            >
+        </div>
+
+        <!-- TÍTULO DE RESPALDO / ACCESIBILIDAD -->
         <h1>El Conjuro de las Ranas</h1>
+
+        <!-- NAVEGACIÓN -->
+
         <nav>
-            <a href="#info-general">INFO GENERAL</a>
-            <a href="#autores">AUTORES</a>
-            <a href="#poetas">POETAS</a>
-            <a href="#obras">OBRAS</a>
-            <a href="#fotografias">FOTOGRAFÍAS</a>
-            <a href="#contacto">CONTACTO</a>
-            <a href="#redes">REDES</a>
+
+            <a href="#info-general">
+                INFO GENERAL
+            </a>
+
+            <a href="#autores">
+                AUTORES
+            </a>
+
+            <a href="#poetas">
+                POETAS
+            </a>
+
+            <a href="#obras">
+                OBRAS
+            </a>
+
+            <a href="#fotografias">
+                FOTOGRAFÍAS
+            </a>
+
+            <a href="#contacto">
+                CONTACTO
+            </a>
+
+            <a href="#redes">
+                REDES
+            </a>
+
         </nav>
+
     </header>
 
-    <!-- CONTENIDO PRINCIPAL -->
+
+    <!-- =========================================
+         CONTENIDO PRINCIPAL
+    ========================================= -->
+
     <main>
 
-        <!-- 1. INFORMACIÓN GENERAL -->
-        <section id="info-general" class="psycho-section">
-            <h2>Info General</h2>
+
+        <!-- =====================================
+             1. INFORMACIÓN GENERAL
+        ====================================== -->
+
+        <section
+            id="info-general"
+            class="psycho-section"
+        >
+
+            <h2>
+                Info General
+            </h2>
+
             <div class="info-box">
-                <!-- Espacio listo para agregar texto informativo -->
+
+                <!--
+                    Espacio listo para agregar
+                    texto informativo.
+                -->
+
             </div>
+
         </section>
 
-        <!-- 2. AUTORES -->
-        <section id="autores" class="psycho-section">
-            <h2>Autores</h2>
+
+        <!-- =====================================
+             2. AUTORES
+        ====================================== -->
+
+        <section
+            id="autores"
+            class="psycho-section"
+        >
+
+            <h2>
+                Autores
+            </h2>
+
             <div class="authors-grid">
-                <!-- Iván Mata (Foto 3.jpg) -->
+
+
+                <!-- IVÁN MATA -->
+
                 <div class="author-card">
+
                     <div class="author-photo-frame">
-                        <img src="3.jpg" alt="Iván Mata">
+
+                        <img
+                            src="3.jpg"
+                            alt="Iván Mata"
+                        >
+
                     </div>
-                    <h3>Iván Mata</h3>
+
+                    <h3>
+                        Iván Mata
+                    </h3>
+
                 </div>
-                <!-- Gerardo Szae (Foto 2.jpg) -->
+
+
+                <!-- GERARDO SZAE -->
+
                 <div class="author-card">
+
                     <div class="author-photo-frame">
-                        <img src="2.jpg" alt="Gerardo Szae">
+
+                        <img
+                            src="2.jpg"
+                            alt="Gerardo Szae"
+                        >
+
                     </div>
-                    <h3>Gerardo Szae</h3>
+
+                    <h3>
+                        Gerardo Szae
+                    </h3>
+
                 </div>
-                <!-- Gustavo Narváez (Foto 4.jpg) -->
+
+
+                <!-- GUSTAVO NARVÁEZ -->
+
                 <div class="author-card">
+
                     <div class="author-photo-frame">
-                        <img src="4.jpg" alt="Gustavo Narváez">
+
+                        <img
+                            src="4.jpg"
+                            alt="Gustavo Narváez"
+                        >
+
                     </div>
-                    <h3>Gustavo Narváez</h3>
+
+                    <h3>
+                        Gustavo Narváez
+                    </h3>
+
                 </div>
+
+
             </div>
+
         </section>
 
-        <!-- 3. POETAS SELECCIONADOS (10 SECCIONES) -->
-        <section id="poetas" class="psycho-section">
-            <h2>10 Poetas Seleccionados — Primera Edición</h2>
+
+        <!-- =====================================
+             3. POETAS SELECCIONADOS
+        ====================================== -->
+
+        <section
+            id="poetas"
+            class="psycho-section"
+        >
+
+            <h2>
+                10 Poetas Seleccionados —
+                Primera Edición
+            </h2>
+
             <div class="poets-grid">
-                <div class="poet-card"><span class="number">1</span><div class="name-slot"></div></div>
-                <div class="poet-card"><span class="number">2</span><div class="name-slot"></div></div>
-                <div class="poet-card"><span class="number">3</span><div class="name-slot"></div></div>
-                <div class="poet-card"><span class="number">4</span><div class="name-slot"></div></div>
-                <div class="poet-card"><span class="number">5</span><div class="name-slot"></div></div>
-                <div class="poet-card"><span class="number">6</span><div class="name-slot"></div></div>
-                <div class="poet-card"><span class="number">7</span><div class="name-slot"></div></div>
-                <div class="poet-card"><span class="number">8</span><div class="name-slot"></div></div>
-                <div class="poet-card"><span class="number">9</span><div class="name-slot"></div></div>
-                <div class="poet-card"><span class="number">10</span><div class="name-slot"></div></div>
+
+
+                <div class="poet-card">
+                    <span class="number">1</span>
+                    <div class="name-slot"></div>
+                </div>
+
+                <div class="poet-card">
+                    <span class="number">2</span>
+                    <div class="name-slot"></div>
+                </div>
+
+                <div class="poet-card">
+                    <span class="number">3</span>
+                    <div class="name-slot"></div>
+                </div>
+
+                <div class="poet-card">
+                    <span class="number">4</span>
+                    <div class="name-slot"></div>
+                </div>
+
+                <div class="poet-card">
+                    <span class="number">5</span>
+                    <div class="name-slot"></div>
+                </div>
+
+                <div class="poet-card">
+                    <span class="number">6</span>
+                    <div class="name-slot"></div>
+                </div>
+
+                <div class="poet-card">
+                    <span class="number">7</span>
+                    <div class="name-slot"></div>
+                </div>
+
+                <div class="poet-card">
+                    <span class="number">8</span>
+                    <div class="name-slot"></div>
+                </div>
+
+                <div class="poet-card">
+                    <span class="number">9</span>
+                    <div class="name-slot"></div>
+                </div>
+
+                <div class="poet-card">
+                    <span class="number">10</span>
+                    <div class="name-slot"></div>
+                </div>
+
+
             </div>
+
         </section>
 
-        <!-- 4. OBRAS -->
-        <section id="obras" class="psycho-section">
-            <h2>Obras</h2>
+
+        <!-- =====================================
+             4. OBRAS
+        ====================================== -->
+
+        <section
+            id="obras"
+            class="psycho-section"
+        >
+
+            <h2>
+                Obras
+            </h2>
+
             <div class="gallery-grid">
-                <div class="gallery-item"><img src="" alt=""></div>
-                <div class="gallery-item"><img src="" alt=""></div>
-                <div class="gallery-item"><img src="" alt=""></div>
-                <div class="gallery-item"><img src="" alt=""></div>
-                <div class="gallery-item"><img src="" alt=""></div>
-                <div class="gallery-item"><img src="" alt=""></div>
+
+                <div class="gallery-item">
+                    <img
+                        src=""
+                        alt=""
+                    >
+                </div>
+
+                <div class="gallery-item">
+                    <img
+                        src=""
+                        alt=""
+                    >
+                </div>
+
+                <div class="gallery-item">
+                    <img
+                        src=""
+                        alt=""
+                    >
+                </div>
+
+                <div class="gallery-item">
+                    <img
+                        src=""
+                        alt=""
+                    >
+                </div>
+
+                <div class="gallery-item">
+                    <img
+                        src=""
+                        alt=""
+                    >
+                </div>
+
+                <div class="gallery-item">
+                    <img
+                        src=""
+                        alt=""
+                    >
+                </div>
+
             </div>
+
         </section>
 
-        <!-- 5. FOTOGRAFÍAS -->
-        <section id="fotografias" class="psycho-section">
-            <h2>Fotografías</h2>
+
+        <!-- =====================================
+             5. FOTOGRAFÍAS
+        ====================================== -->
+
+        <section
+            id="fotografias"
+            class="psycho-section"
+        >
+
+            <h2>
+                Fotografías
+            </h2>
+
             <div class="gallery-grid">
-                <div class="gallery-item"><img src="" alt=""></div>
-                <div class="gallery-item"><img src="" alt=""></div>
-                <div class="gallery-item"><img src="" alt=""></div>
-                <div class="gallery-item"><img src="" alt=""></div>
+
+                <div class="gallery-item">
+                    <img
+                        src=""
+                        alt=""
+                    >
+                </div>
+
+                <div class="gallery-item">
+                    <img
+                        src=""
+                        alt=""
+                    >
+                </div>
+
+                <div class="gallery-item">
+                    <img
+                        src=""
+                        alt=""
+                    >
+                </div>
+
+                <div class="gallery-item">
+                    <img
+                        src=""
+                        alt=""
+                    >
+                </div>
+
             </div>
+
         </section>
 
-        <!-- 6. ADJUNTAR ARCHIVOS Y COMENTARIOS (FORMSUBMIT) -->
-        <section id="contacto" class="psycho-section">
-            <h2>Adjuntar Archivos y Comentarios</h2>
-            <form class="formsubmit-container" action="https://formsubmit.co/edicionesbelikones@gmail.com" method="POST" enctype="multipart/form-data">
-                <div class="form-group">
-                    <label for="name">Nombre / Seudónimo</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
+
+        <!-- =====================================
+             6. CONTACTO / FORMSUBMIT
+        ====================================== -->
+
+        <section
+            id="contacto"
+            class="psycho-section"
+        >
+
+            <h2>
+                Adjuntar Archivos y Comentarios
+            </h2>
+
+
+            <form
+                class="formsubmit-container"
+                action="https://formsubmit.co/edicionesbelikones@gmail.com"
+                method="POST"
+                enctype="multipart/form-data"
+            >
+
+
+                <!-- NOMBRE -->
 
                 <div class="form-group">
-                    <label for="email">Correo Electrónico</label>
-                    <input type="email" id="email" name="email" required>
+
+                    <label for="name">
+                        Nombre / Seudónimo
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        required
+                    >
+
                 </div>
+
+
+                <!-- CORREO -->
 
                 <div class="form-group">
-                    <label for="message">Comentarios</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
+
+                    <label for="email">
+                        Correo Electrónico
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                    >
+
                 </div>
+
+
+                <!-- COMENTARIOS -->
 
                 <div class="form-group">
-                    <label for="attachment">Adjuntar Archivo</label>
-                    <input type="file" id="attachment" name="attachment" class="file-upload-btn">
+
+                    <label for="message">
+                        Comentarios
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="4"
+                        required
+                    ></textarea>
+
                 </div>
 
-                <button type="submit">Enviar Conjuro</button>
+
+                <!-- ARCHIVO -->
+
+                <div class="form-group">
+
+                    <label for="attachment">
+                        Adjuntar Archivo
+                    </label>
+
+                    <input
+                        type="file"
+                        id="attachment"
+                        name="attachment"
+                        class="file-upload-btn"
+                    >
+
+                </div>
+
+
+                <!-- BOTÓN -->
+
+                <button
+                    type="submit"
+                >
+                    Enviar Conjuro
+                </button>
+
+
             </form>
+
         </section>
 
-        <!-- 7. REDES SOCIALES -->
-        <section id="redes" class="psycho-section">
-            <h2>Redes Sociales</h2>
+
+        <!-- =====================================
+             7. REDES SOCIALES
+        ====================================== -->
+
+        <section
+            id="redes"
+            class="psycho-section"
+        >
+
+            <h2>
+                Redes Sociales
+            </h2>
+
             <div class="social-box">
-                <a href="#" target="_blank" class="social-link">Instagram</a>
-                <a href="#" target="_blank" class="social-link">Facebook</a>
-                <a href="#" target="_blank" class="social-link">X / Twitter</a>
+
+
+                <a
+                    href="#"
+                    target="_blank"
+                    class="social-link"
+                >
+                    Instagram
+                </a>
+
+
+                <a
+                    href="#"
+                    target="_blank"
+                    class="social-link"
+                >
+                    Facebook
+                </a>
+
+
+                <a
+                    href="#"
+                    target="_blank"
+                    class="social-link"
+                >
+                    X / Twitter
+                </a>
+
+
             </div>
+
         </section>
+
 
     </main>
 
-    <!-- PIE DE PÁGINA -->
+
+    <!-- =========================================
+         PIE DE PÁGINA
+    ========================================= -->
+
     <footer>
-        &copy; EL CONJURO DE LAS RANAS — TODOS LOS DERECHOS RESERVADOS
+
+        &copy;
+        EL CONJURO DE LAS RANAS
+        —
+        TODOS LOS DERECHOS RESERVADOS
+
     </footer>
+
 
 </body>
 </html>
