@@ -516,12 +516,12 @@
 
         #info-general {
             grid-column:
-                span 6;
+                span 12; /* Ajustado a 12 columnas para que el texto luzca con amplitud */
         }
 
         #autores {
             grid-column:
-                span 6;
+                span 12;
         }
 
         #poetas {
@@ -551,13 +551,10 @@
 
 
         /* =========================================
-           INFORMACIÓN GENERAL
+           INFORMACIÓN GENERAL / MANIFIESTO
         ========================================== */
 
         .info-box {
-
-            min-height:
-                160px;
 
             border:
                 1px solid
@@ -567,10 +564,74 @@
                 12px;
 
             padding:
-                1.2rem;
+                1.8rem;
 
             background:
                 var(--bg-card-alpha);
+
+            line-height:
+                1.7;
+
+            font-size:
+                0.98rem;
+
+            color:
+                var(--off-white);
+        }
+
+        .manifesto-subtitle {
+            font-family: 'Cinzel', serif;
+            text-align: center;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            color: var(--pure-white);
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            border-bottom: 1px double var(--gray-border);
+            padding-bottom: 0.8rem;
+        }
+
+        .manifesto-p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        .manifesto-highlight {
+            font-family: 'Cinzel', serif;
+            font-size: 1.15rem;
+            font-weight: 700;
+            text-align: center;
+            color: var(--pure-white);
+            margin: 1.8rem 0;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            border-left: 3px solid var(--pure-white);
+            border-right: 3px solid var(--pure-white);
+            padding: 0.6rem 1rem;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .manifesto-quote {
+            font-family: 'Cinzel', serif;
+            font-size: 1.2rem;
+            font-weight: 900;
+            text-align: center;
+            color: #ffffff;
+            margin: 2rem 0;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            background: #000000;
+            padding: 1rem;
+            border: 1px dashed var(--pure-white);
+            border-radius: 8px;
+        }
+
+        .manifesto-footer-p {
+            font-weight: 600;
+            color: var(--pure-white);
+            text-align: center;
+            margin-top: 1.5rem;
+            font-size: 1.05rem;
         }
 
 
@@ -586,11 +647,14 @@
             grid-template-columns:
                 repeat(
                     auto-fit,
-                    minmax(130px, 1fr)
+                    minmax(180px, 1fr)
                 );
 
             gap:
-                1rem;
+                1.5rem;
+
+            justify-content:
+                center;
         }
 
 
@@ -604,10 +668,10 @@
         .author-photo-frame {
 
             width:
-                110px;
+                130px;
 
             height:
-                110px;
+                130px;
 
             margin:
                 0 auto 0.8rem auto;
@@ -675,7 +739,6 @@
             transition: transform 0.4s ease, filter 0.4s ease;
         }
 
-        /* ZOOM Y PASO A COLOR EN AUTORES */
         .author-photo-frame:hover img {
 
             filter:
@@ -892,8 +955,6 @@
             filter:
                 grayscale(0%);
         }
-
-        /* BOTÓN Y DESPLEGABLE MENCIONES */
 
         .menciones-btn-container {
             margin-top: 1.2rem;
@@ -1418,6 +1479,10 @@
                     0.35rem
                     0.65rem;
             }
+
+            .info-box {
+                padding: 1.2rem;
+            }
         }
 
 
@@ -1594,7 +1659,51 @@
             </h2>
 
             <div class="info-box">
+                <div class="manifesto-subtitle">Un espacio para decirlo todo</div>
 
+                <p class="manifesto-p">
+                    El Conjuro de las Ranas no es una editorial. Nosotros no editamos; editas tú. Esta diferencia es fundamental para entender lo que somos y, sobre todo, lo que queremos construir. No pretendemos imponer una determinada manera de escribir, corregir las ideas de quien participa ni convertir cada texto en una pieza que tenga que ajustarse a los estándares tradicionales de una publicación. Aquí no buscamos domesticar la escritura: buscamos darle un lugar donde pueda existir.
+                </p>
+
+                <p class="manifesto-p">
+                    En El Conjuro de las Ranas publicamos todo tipo de textos. No creemos que la literatura tenga que reducirse a una página en blanco, a una estructura específica o a un género determinado. Un poema puede convivir con un ensayo; una reflexión personal puede encontrarse junto a un cuento, una confesión, una crítica, un experimento literario o un texto que simplemente nació de la necesidad de decir algo. No queremos decidir de antemano qué merece ser escrito y qué no.
+                </p>
+
+                <p class="manifesto-p">
+                    Nuestro principal objetivo es ofrecer un espacio para que jóvenes de entre 10 y 30 años puedan expresarse con libertad. Queremos que exista un lugar en el que las ideas puedan fluir sin que el miedo a ser juzgado, corregido o rechazado termine convirtiéndose en una barrera para escribir. Creemos que muchas voces jóvenes tienen algo que decir, pero que con demasiada frecuencia terminan callándose porque sienten que no escriben “lo suficientemente bien”, que sus ideas son demasiado extrañas o que su manera de expresarse no encaja en los moldes establecidos.
+                </p>
+
+                <div class="manifesto-highlight">
+                    Nosotros queremos romper precisamente con esos moldes.
+                </div>
+
+                <p class="manifesto-p">
+                    Si un escritor quiere decir algo, ¿por qué tendríamos que editar sus ideas? Una cosa es corregir un error que el propio autor quiera corregir y otra muy distinta es modificar su voz hasta hacerla irreconocible. No queremos que el texto deje de pertenecer a quien lo escribió. No queremos convertir una experiencia, una opinión, una rabia, una duda o una imaginación en algo artificialmente correcto.
+                </p>
+
+                <div class="manifesto-highlight">
+                    Aquí, el autor conserva el control sobre lo que dice.
+                </div>
+
+                <p class="manifesto-p">
+                    Basta de ediciones. Basta de recortes. Basta de convertir cada texto en algo que tenga que agradarle a todo el mundo. La escritura también puede ser incómoda, imperfecta, contradictoria, absurda, cruda, experimental o incluso difícil de comprender. No todo tiene que estar explicado. No todo tiene que seguir una estructura. No todo tiene que buscar una moraleja.
+                </p>
+
+                <div class="manifesto-quote">
+                    AQUÍ SE DICE DE TODO.
+                </div>
+
+                <p class="manifesto-p">
+                    El Conjuro de las Ranas quiere ser un espacio abierto para quienes escriben porque tienen algo dentro que necesita salir. Para quienes escriben por gusto, por necesidad, por curiosidad o simplemente porque sí. No prometemos que cada texto será perfecto; prometemos algo mucho más importante: que tendrá un espacio donde ser leído.
+                </p>
+
+                <p class="manifesto-p">
+                    Porque escribir también es una forma de existir, y nadie debería necesitar permiso para hacerlo.
+                </p>
+
+                <p class="manifesto-footer-p">
+                    El Conjuro de las Ranas no edita tu voz. Te da un lugar para que puedas usarla.
+                </p>
             </div>
 
         </section>
